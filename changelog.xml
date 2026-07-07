@@ -1,1 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelogs>
+    <changelog>
+        <element>pkg_devartvideo</element>
+        <type>package</type>
+        <version>1.0.0</version>
 
+        <addition>
+            <item>Added full Joomla 6 native DevArt Video package</item>
+            <item>Added administrator component for managing video libraries</item>
+            <item>Added frontend video module</item>
+            <item>Added video categories with unlimited hierarchy support</item>
+            <item>Added YouTube video support</item>
+            <item>Added local video support</item>
+            <item>Added featured videos support</item>
+            <item>Added responsive HTML5 video player</item>
+            <item>Added automatic thumbnail and poster image support</item>
+            <item>Added search, filtering and ordering options</item>
+            <item>Added complete JSON backup and restore</item>
+            <item>Added maintenance and cache management tools</item>
+            <item>Added GitHub-based Joomla update server support</item>
+            <item>Added automatic image optimization during upload</item>
+            <item>Added automatic image resize with configurable maximum dimensions</item>
+            <item>Added optional WebP image conversion</item>
+            <item>Added automatic safe filename generation for uploaded images</item>
+        </addition>
+
+        <change>
+            <item>Video architecture designed specifically for Joomla 6 and PHP 8.2+</item>
+            <item>Optimized for editorial websites, news portals, video libraries and high-traffic environments</item>
+            <item>Video thumbnails uploaded through the component are automatically optimized while existing Media Manager images remain untouched</item>
+            <item>Video Settings and administrator tools follow the common DevArt component architecture for improved usability and consistency</item>
+        </change>
+
+        <security>
+            <item>Added ACL enforcement for administrator operations</item>
+            <item>Added CSRF protection for administrator actions</item>
+            <item>Added secure JSON import and export validation</item>
+            <item>Added parameterized database queries throughout the component</item>
+            <item>Added safe file upload validation and image processing</item>
+            <item>Added safe output escaping throughout frontend rendering</item>
+        </security>
+
+        <note>
+            <item>Initial public production release of DevArt Video</item>
+            <item>Built exclusively for Joomla 6 with PHP 8.2+</item>
+            <item>No database migration required for new installations</item>
+            <item>JSON backup and restore provides complete site portability</item>
+            <item>Native integration with DevArt Slider and DevArt Widgets</item>
+            <item>Always test upgrades on a staging environment before production deployment</item>
+        </note>
+
+    </changelog>
+</changelogs>
