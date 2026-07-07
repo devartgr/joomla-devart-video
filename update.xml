@@ -11,7 +11,7 @@
         <downloads>
             <downloadurl type="full" format="zip">https://github.com/devartgr/joomla-devart-video/releases/download/v1.0.0/pkg_devartvideo_v1.0.0.zip</downloadurl>
         </downloads>
-        <sha256>cd2091ac6a74f8e25db0efcd2ef327fa45879173d0ed1d604470ae0c310ae07c</sha256>
+        <sha256>92d8ce2a15f0d26cd9e982024f39654d0e8f001e270f7c31ceda6176d2f9f373</sha256>
         <changelogurl>https://raw.githubusercontent.com/devartgr/joomla-devart-video/main/changelog.xml</changelogurl>
         <targetplatform name="joomla" version="6.*" />
         <php_minimum>8.2</php_minimum>
