@@ -3,12 +3,54 @@
     <changelog>
         <element>pkg_devartvideo</element>
         <type>package</type>
+        <version>1.1.0</version>
+
+        <change>
+            <item>Joomla native updates now target the package only (pkg_devartvideo, site client)</item>
+            <item>Public update.xml no longer advertises the component as a separate update channel</item>
+            <item>PHP minimum for updates aligned to 8.3.0</item>
+        </change>
+
+        <fix>
+            <item>Missing or unpublished single videos return HTTP 404 instead of a listing fallback</item>
+            <item>Category listings honour Include subcategories</item>
+            <item>Category descriptions use safe HTML on save and Joomla content prepare on output</item>
+            <item>Listing tag and featured query-string filters honour filter visibility</item>
+            <item>Administrator custom fields use WebAssetManager inline scripts</item>
+            <item>External cron accepts GET only</item>
+        </fix>
+
+        <security>
+            <item>Public queries enforce access, language, and publish window visibility</item>
+            <item>Embed responses use private no-store cache headers and constrained CSP</item>
+            <item>Installer fails fast on schema errors instead of swallowing exceptions</item>
+            <item>Local media and thumbnail paths stay contained under the site root</item>
+        </security>
+
+        <addition>
+            <item>Frontend administrator, plugin, package, and module languages for fr-FR, de-DE, es-ES, it-IT, and pt-PT</item>
+            <item>Video-specific JSON catalog backup in Tools</item>
+            <item>Latin FULLTEXT BOOLEAN prefix search on frontend listings</item>
+        </addition>
+
+        <note>
+            <item>Production-ready cumulative release since 1.0.0</item>
+            <item>Install or update with the package ZIP once; later updates use Joomla native package updates</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+            <item>Component, module, and task plugin always update together through pkg_devartvideo</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartvideo</element>
+        <type>package</type>
         <version>1.0.0</version>
 
         <addition>
             <item>Added full Joomla 6 native DevArt Video package</item>
             <item>Added administrator component for managing video libraries</item>
             <item>Added frontend video module</item>
+            <item>Added scheduled task plugin for maintenance and sync</item>
             <item>Added video categories with unlimited hierarchy support</item>
             <item>Added YouTube video support</item>
             <item>Added local video support</item>
@@ -26,7 +68,7 @@
         </addition>
 
         <change>
-            <item>Video architecture designed specifically for Joomla 6 and PHP 8.2+</item>
+            <item>Video architecture designed specifically for Joomla 6 and PHP 8.3.0+</item>
             <item>Optimized for editorial websites, news portals, video libraries and high-traffic environments</item>
             <item>Video thumbnails uploaded through the component are automatically optimized while existing Media Manager images remain untouched</item>
             <item>Video Settings and administrator tools follow the common DevArt component architecture for improved usability and consistency</item>
@@ -43,12 +85,11 @@
 
         <note>
             <item>Initial public production release of DevArt Video</item>
-            <item>Built exclusively for Joomla 6 with PHP 8.2+</item>
+            <item>Built exclusively for Joomla 6 with PHP 8.3.0+</item>
             <item>No database migration required for new installations</item>
             <item>JSON backup and restore provides complete site portability</item>
             <item>Native integration with DevArt Slider and DevArt Widgets</item>
             <item>Always test upgrades on a staging environment before production deployment</item>
         </note>
-
     </changelog>
 </changelogs>
