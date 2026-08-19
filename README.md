@@ -1,21 +1,21 @@
 # DevArt Video for Joomla
 
-Modern video management component for Joomla 6, designed for news portals, magazines, video libraries, media organizations, educational websites, businesses and high-traffic websites.
+Modern video management package for Joomla 6, designed for news portals, magazines, video libraries, media organizations, educational websites, businesses and high-traffic websites.
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
-![PHP](https://img.shields.io/badge/PHP-8.2%2B-green)
-![Release](https://img.shields.io/badge/Version-1.0.0-orange)
+![PHP](https://img.shields.io/badge/PHP-8.3.0%2B-green)
+![Release](https://img.shields.io/badge/Version-1.1.0-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
 
 ## Overview
 
-DevArt Video is a modern Joomla 6 video management component designed from the ground up for performance, security, stability and scalability.
+DevArt Video is a modern Joomla 6 video platform designed from the ground up for performance, security, stability and scalability.
 
 It allows administrators to create and manage professional video libraries with categories, featured videos, YouTube integration, local videos, responsive playback and structured video information while remaining lightweight and easy to maintain.
 
-The package includes a Joomla component and frontend module.
+The package includes an administrator component, a frontend module, and a scheduled task plugin. All extensions update together through the package.
 
 ---
 
@@ -26,7 +26,7 @@ The package includes a Joomla component and frontend module.
 Create and manage:
 
 - Video library
-- Categories
+- Categories with unlimited hierarchy
 - Featured videos
 - Video thumbnails
 - Poster images
@@ -48,6 +48,7 @@ Features:
 - YouTube
 - Self-hosted MP4 videos
 - Self-hosted WEBM videos
+- Scheduled source synchronization
 
 ---
 
@@ -63,6 +64,7 @@ Features:
 - Mobile friendly
 - Lightweight frontend
 - Browser-native controls
+- Embed support with constrained CSP and no-store cache headers
 
 ---
 
@@ -78,9 +80,10 @@ Features:
 
 - Responsive layouts
 - SEO-friendly URLs
-- Category filtering
+- Category filtering with subcategory support
 - Featured videos
-- Video search
+- Video search with FULLTEXT prefix matching for Latin queries
+- HTTP 404 for missing or unpublished single videos
 
 ---
 
@@ -111,6 +114,7 @@ Features:
 
 - Complete JSON backup
 - Complete JSON restore
+- Video-specific JSON catalog backup in Tools
 - Safe validation
 - Portable configuration
 
@@ -128,6 +132,7 @@ Features:
 - Category rebuild
 - Default category installer
 - Default category removal
+- Scheduled task plugin for sync and maintenance
 
 ---
 
@@ -146,11 +151,18 @@ Videos can be displayed using the native rendering engines of both extensions wi
 
 ### Joomla Native Updates
 
-Supports Joomla native updates via GitHub.
+Supports Joomla native package updates via GitHub.
 
 Update Server:
 
 https://raw.githubusercontent.com/devartgr/joomla-devart-video/main/update.xml
+
+Important:
+
+- Updates are advertised for **`pkg_devartvideo`** only
+- Update type: **`package`**
+- Client: **`site`**
+- Component, module, and task plugin always update together
 
 ---
 
@@ -158,15 +170,18 @@ https://raw.githubusercontent.com/devartgr/joomla-devart-video/main/update.xml
 
 This package installs:
 
-- com_devartvideo
-- mod_devartvideo
+- `com_devartvideo` — administrator component
+- `mod_devartvideo` — site module
+- `plg_task_devartvideo` — scheduled task plugin
+
+Always install and update the **package ZIP**, not the child extensions separately.
 
 ---
 
 ## Requirements
 
-- Joomla 6.x
-- PHP 8.2+
+- Joomla 6.0+
+- PHP 8.3.0+
 
 ---
 
@@ -218,7 +233,22 @@ Features:
 - Secure JSON import/export
 - Safe file upload validation
 - Safe output escaping
+- Public access, language, and publish window enforcement
+- Local media and thumbnail paths contained under the site root
 - Joomla native architecture
+
+---
+
+## Languages
+
+Shipped frontend and administrator languages include:
+
+- English (en-GB)
+- French (fr-FR)
+- German (de-DE)
+- Spanish (es-ES)
+- Italian (it-IT)
+- Portuguese (pt-PT)
 
 ---
 
@@ -227,8 +257,8 @@ Features:
 Supported:
 
 - Joomla 6.x
-- PHP 8.2+
-- Joomla native updates
+- PHP 8.3.0+
+- Joomla native package updates
 - Modern Joomla MVC architecture
 
 Not Supported:
@@ -236,13 +266,48 @@ Not Supported:
 - Joomla 3
 - Joomla 4
 - Joomla 5
-- Legacy PHP versions
+- PHP 7.x
+- PHP 8.0–8.2
 
 ---
 
 ## Current Version
 
-1.0.0
+1.1.0
+
+---
+
+## What's New in 1.1.0
+
+Production-ready cumulative release since 1.0.0.
+
+### Updates & Infrastructure
+
+- Joomla native updates now target the package only (`pkg_devartvideo`, site client)
+- Public `update.xml` no longer advertises the component as a separate update channel
+- PHP minimum aligned to 8.3.0
+
+### Fixes
+
+- Missing or unpublished single videos return HTTP 404
+- Category listings honour Include subcategories
+- Category descriptions use safe HTML and Joomla content prepare
+- Listing tag and featured filters honour filter visibility
+- Administrator custom fields use WebAssetManager inline scripts
+- External cron accepts GET only
+
+### Security & Stability
+
+- Public queries enforce access, language, and publish window visibility
+- Embed responses use private no-store cache headers and constrained CSP
+- Installer fails fast on schema errors
+- Local media and thumbnail paths stay contained under the site root
+
+### Additions
+
+- Frontend, administrator, plugin, package, and module languages for fr-FR, de-DE, es-ES, it-IT, and pt-PT
+- Video-specific JSON catalog backup in Tools
+- Latin FULLTEXT BOOLEAN prefix search on frontend listings
 
 ---
 
@@ -272,13 +337,6 @@ Not Supported:
 - Large library performance
 - Joomla 6 native architecture
 - Cache-first rendering
-
-### Compatibility
-
-- Joomla 6.x
-- PHP 8.2+
-- Cloudflare friendly
-- Production ready
 
 ---
 
