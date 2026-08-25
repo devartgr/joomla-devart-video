@@ -4,7 +4,7 @@ Modern video management package for Joomla 6, designed for news portals, magazin
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3.0%2B-green)
-![Release](https://img.shields.io/badge/Version-1.1.0-orange)
+![Release](https://img.shields.io/badge/Version-1.1.1-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -273,7 +273,34 @@ Not Supported:
 
 ## Current Version
 
-1.1.0
+1.1.1
+
+---
+
+## What's New in 1.1.1
+
+Administrator UI polish and language expansion on top of the package-only update channel from 1.1.0.
+
+### Settings & Options
+
+- Settings tabs use bordered option groups for List, Detail, Categories, Media, and Embed
+- Component Options Permissions tab restored
+- General options grouped: Menus, Cache & Batches, Automatic Sync, Local Video, Debug
+
+### Administrator hubs
+
+- Dashboard and Tools use Article Tools-style action cards
+- Tools split into Settings, Options, Backup/Cache, Maintenance, and Diagnostics
+
+### Languages
+
+- Expanded to 15 locales with key and sprintf parity against en-GB
+- Added: cs-CZ, nl-NL, pl-PL, ru-RU, uk-UA, ja-JP, tr-TR, zh-CN
+- Task plugin languages ship with the package even when the site language pack is missing
+
+### Fix
+
+- Admin settings watch-link placeholder resolves from administrator language files
 
 ---
 
