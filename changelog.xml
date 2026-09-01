@@ -3,6 +3,29 @@
     <changelog>
         <element>pkg_devartvideo</element>
         <type>package</type>
+        <version>1.1.2</version>
+
+        <fix>
+            <item>Removed the All list-limit option; page size is capped at 200</item>
+            <item>Trash, restore and delete process selected IDs in safe chunks</item>
+            <item>Restore from trash republishes videos instead of leaving them unpublished</item>
+            <item>YouTube imports without a source default category fall back to the Default category</item>
+        </fix>
+
+        <addition>
+            <item>Install and update ensure a published Default category under ROOT</item>
+        </addition>
+
+        <note>
+            <item>Install or update with the package ZIP; later updates use Joomla native package updates</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+            <item>Component, module, and task plugin always update together through pkg_devartvideo</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartvideo</element>
+        <type>package</type>
         <version>1.1.1</version>
 
         <change>

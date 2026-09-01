@@ -4,7 +4,7 @@ Modern video management package for Joomla 6, designed for news portals, magazin
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3.0%2B-green)
-![Release](https://img.shields.io/badge/Version-1.1.1-orange)
+![Release](https://img.shields.io/badge/Version-1.1.2-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -273,7 +273,25 @@ Not Supported:
 
 ## Current Version
 
-1.1.1
+1.1.2
+
+---
+
+## What's New in 1.1.2
+
+Stability release for large video libraries in the administrator.
+
+### Fixes
+
+- Removed the **All** list-limit option; page size is capped at **200** on the videos list and other administrator lists
+- Trash, restore, and delete process selected IDs in safe chunks
+- Restore from trash republishes videos instead of leaving them unpublished
+- YouTube imports without a source default category fall back to the **Default** category
+
+### Additions
+
+- Install and update ensure a published **Default** category under ROOT
+- Existing uncategorized videos are **not** mass-reassigned on install/update (safe for large libraries)
 
 ---
 
