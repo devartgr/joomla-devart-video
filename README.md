@@ -4,7 +4,7 @@ Modern video management package for Joomla 6, designed for news portals, magazin
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3.0%2B-green)
-![Release](https://img.shields.io/badge/Version-1.1.3-orange)
+![Release](https://img.shields.io/badge/Version-1.1.4-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -273,7 +273,17 @@ Not Supported:
 
 ## Current Version
 
-1.1.3
+1.1.4
+
+---
+
+## What's New in 1.1.4
+
+Administrator video Save fix — 2 September 2026.
+
+### Fixes
+
+- Video Save / Save & Close no longer writes the generated column `provider_video_uid`, which blocked saving even when nothing changed
 
 ---
 
