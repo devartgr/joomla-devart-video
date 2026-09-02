@@ -4,7 +4,7 @@ Modern video management package for Joomla 6, designed for news portals, magazin
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3.0%2B-green)
-![Release](https://img.shields.io/badge/Version-1.1.2-orange)
+![Release](https://img.shields.io/badge/Version-1.1.3-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -273,7 +273,21 @@ Not Supported:
 
 ## Current Version
 
-1.1.2
+1.1.3
+
+---
+
+## What's New in 1.1.3
+
+Frontend listing layout fixes — 2 September 2026.
+
+### Fixes
+
+- **Professional list (directory)** keeps a single full-width column and no longer inherits Cards column-density CSS
+- **Professional list** spacing fixed between thumbnail and text so titles no longer sit on the image
+- **Compact cards** keep multi-column density with horizontal mini-cards (same behaviour as 1.1.2)
+- **Cards Columns** settings are hidden in Video Settings when Professional list is selected
+- Cards and Overlay templates still honour desktop / tablet / mobile column settings
 
 ---
 

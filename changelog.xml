@@ -3,6 +3,26 @@
     <changelog>
         <element>pkg_devartvideo</element>
         <type>package</type>
+        <version>1.1.3</version>
+
+        <fix>
+            <item>Professional list (directory) keeps a single-column row layout instead of inheriting cards density columns</item>
+            <item>Professional list adds spacing between thumbnail and text so titles no longer sit on the image</item>
+            <item>Compact cards keep multi-column density with horizontal mini-cards</item>
+            <item>Cards Columns settings are hidden when Professional list is selected in Video Settings</item>
+            <item>Cards and Overlay templates still honour desktop/tablet/mobile column settings</item>
+        </fix>
+
+        <note>
+            <item>Install or update with the package ZIP; later updates use Joomla native package updates</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+            <item>Component, module, and task plugin always update together through pkg_devartvideo</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartvideo</element>
+        <type>package</type>
         <version>1.1.2</version>
 
         <fix>
