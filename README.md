@@ -4,7 +4,7 @@ Modern video management package for Joomla 6, designed for news portals, magazin
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3.0%2B-green)
-![Release](https://img.shields.io/badge/Version-1.1.4-orange)
+![Release](https://img.shields.io/badge/Version-1.1.5-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -273,7 +273,24 @@ Not Supported:
 
 ## Current Version
 
-1.1.4
+1.1.5
+
+---
+
+## What's New in 1.1.5
+
+Local Media picker and multilanguage menu routing — 21 September 2026.
+
+### Additions
+
+- Local video and ad local video use the Joomla Media picker (browse + upload)
+- Options menu fields list only DevArt Video menus, with Auto discovery for the active language
+
+### Fixes
+
+- Stored local video paths stay site-relative; Media metadata suffixes are stripped on save
+- Allowed local extensions: MP4, WebM, MOV, M4V
+- Generated video links no longer fall back to unrelated Home SEF paths that caused multilanguage 404s
 
 ---
 
