@@ -3,6 +3,26 @@
     <changelog>
         <element>pkg_devartvideo</element>
         <type>package</type>
+        <version>1.1.5</version>
+
+        <fix>
+            <item>Local video and ad video file fields use the Joomla Media picker (browse + upload)</item>
+            <item>Stored paths stay site-relative; media metadata suffixes are stripped on save</item>
+            <item>Local video selection is limited to MP4, WebM, MOV and M4V</item>
+        </fix>
+
+        <note>
+            <item>Install or update with the package ZIP; later updates use Joomla native package updates</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+            <item>Component, module, and task plugin always update together through pkg_devartvideo</item>
+        </note>
+    </changelog>
+
+
+
+    <changelog>
+        <element>pkg_devartvideo</element>
+        <type>package</type>
         <version>1.1.4</version>
 
         <fix>
