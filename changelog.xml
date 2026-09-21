@@ -9,6 +9,9 @@
             <item>Local video and ad video file fields use the Joomla Media picker (browse + upload)</item>
             <item>Stored paths stay site-relative; media metadata suffixes are stripped on save</item>
             <item>Local video selection is limited to MP4, WebM, MOV and M4V</item>
+            <item>Language-aware video menu routing: Options pickers list only DevArt Video menus</item>
+            <item>Auto discovers a DevArt Video menu for the active language when Options are unset</item>
+            <item>Generated links no longer fall back to unrelated Home SEF paths that caused 404s</item>
         </fix>
 
         <note>
