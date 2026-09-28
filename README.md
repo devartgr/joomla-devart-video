@@ -4,7 +4,7 @@ Modern video management package for Joomla 6, designed for news portals, magazin
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3.0%2B-green)
-![Release](https://img.shields.io/badge/Version-1.1.5-orange)
+![Release](https://img.shields.io/badge/Version-1.1.6-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -273,7 +273,17 @@ Not Supported:
 
 ## Current Version
 
-1.1.5
+1.1.6
+
+---
+
+## What's New in 1.1.6
+
+SiteMenu / MenuItem::client_id fix — 28 September 2026.
+
+### Fixes
+
+- Frontend menu lookup no longer filters by `MenuItem::client_id`. Joomla `SiteMenu` already loads only site items and does not expose `client_id` on `MenuItem`, so `getItems(..., 'client_id')` triggered PHP 8.x `Undefined property` warnings (same fix class as Documents / Events / Business)
 
 ---
 
