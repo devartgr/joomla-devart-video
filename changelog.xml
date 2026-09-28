@@ -3,6 +3,23 @@
     <changelog>
         <element>pkg_devartvideo</element>
         <type>package</type>
+        <version>1.1.6</version>
+
+        <fix>
+            <item>Frontend menu lookup no longer filters by MenuItem::client_id (SiteMenu already loads only site items; avoids PHP 8.x Undefined property warnings)</item>
+        </fix>
+
+        <note>
+            <item>Install or update with the package ZIP; later updates use Joomla native package updates</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+            <item>Component, module, and task plugin always update together through pkg_devartvideo</item>
+        </note>
+    </changelog>
+
+
+    <changelog>
+        <element>pkg_devartvideo</element>
+        <type>package</type>
         <version>1.1.5</version>
 
         <fix>
