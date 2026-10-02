@@ -3,6 +3,32 @@
     <changelog>
         <element>pkg_devartvideo</element>
         <type>package</type>
+        <version>1.1.7</version>
+
+        <fix>
+            <item>Embed script falls back when document.currentScript is null; safer selector handling</item>
+            <item>Public HTML cache headers: Vary for guests, private for logged-in users</item>
+            <item>Module player uses PlayerRenderer with delegated init for slider clones</item>
+            <item>Category expand uses a single nested-set query without BFS/500 cap</item>
+            <item>Video listings use EXISTS filters and keep unicode FULLTEXT search</item>
+            <item>Route path memoization and categories aggregate counts</item>
+            <item>Sync thumbnail I/O moved before DB transaction; failed sources get next_sync backoff</item>
+            <item>Local playback uses authenticated media.stream instead of direct public Media URLs</item>
+            <item>External cron prefers X-Cron-Token with cooldown/lock HTTP status codes</item>
+        </fix>
+
+        <note>
+            <item>Install or update with the package ZIP; later updates use Joomla native package updates</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+            <item>Component, module, and task plugin always update together through pkg_devartvideo</item>
+            <item>Existing bookmarks to raw local Media paths will no longer play; use the protected stream URL</item>
+        </note>
+    </changelog>
+
+
+    <changelog>
+        <element>pkg_devartvideo</element>
+        <type>package</type>
         <version>1.1.6</version>
 
         <fix>
