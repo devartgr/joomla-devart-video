@@ -4,7 +4,7 @@ Modern video management package for Joomla 6, designed for news portals, magazin
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3.0%2B-green)
-![Release](https://img.shields.io/badge/Version-1.1.6-orange)
+![Release](https://img.shields.io/badge/Version-1.1.7-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -273,7 +273,24 @@ Not Supported:
 
 ## Current Version
 
-1.1.6
+1.1.7
+
+---
+
+## What's New in 1.1.7
+
+A+B+C hardening — 2 October 2026.
+
+### Fixes / Hardening
+
+- Embed script falls back when `document.currentScript` is null; safer selector handling
+- Public HTML cache headers: `Vary` for guests, `private` for logged-in users
+- Module player uses `PlayerRenderer` with delegated init for slider clones
+- Category expand via nested-set; listing `EXISTS` filters; unicode FULLTEXT search
+- Route path memoization; categories aggregate counts
+- Sync thumbnail I/O before DB transaction; failed sources get `next_sync` backoff
+- Local playback uses authenticated `media.stream` instead of direct public Media URLs
+- External cron prefers `X-Cron-Token` with cooldown/lock HTTP status codes
 
 ---
 
