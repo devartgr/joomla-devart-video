@@ -3,6 +3,49 @@
     <changelog>
         <element>pkg_devartvideo</element>
         <type>package</type>
+        <version>1.1.7</version>
+
+        <fix>
+            <item>Embed script falls back when document.currentScript is null; safer selector handling</item>
+            <item>Public HTML cache headers: Vary for guests, private for logged-in users</item>
+            <item>Module player uses PlayerRenderer with delegated init for slider clones</item>
+            <item>Category expand uses nested-set ranges with inline integers (multi-parent safe)</item>
+            <item>Video listings use EXISTS filters with inline category/tag ids</item>
+            <item>FULLTEXT search falls back to escaped LIKE when boolean tokens are empty</item>
+            <item>Route path memoization and categories aggregate counts</item>
+            <item>Sync thumbnail I/O moved before DB transaction; failed sources get next_sync backoff</item>
+            <item>Local playback uses media.stream with extension whitelist and RFC Range/HEAD/ETag</item>
+            <item>Listing composite index ensured idempotently via script.php</item>
+            <item>External cron prefers X-Cron-Token with cooldown/lock HTTP status codes</item>
+            <item>Maintainability cleanup: shared admin field helpers, dead Router methods removed, translated table/view strings</item>
+            <item>Settings UI parity: Image Upload Optimization in Options; categories header/footer; single listing Image Ratio (detail ratio removed); Card Background and image ratio apply on overlay cards</item>
+            <item>Admin/scale: remove unused Rebuild Cache; ModalSelect video picker; bounded multi-video and fancy-select category/tag lists</item>
+            <item>Follow-up: ItemSelect picker (slider/widgets parity); Cache Tools shows thumbnail storage; module cards use compact thumbs</item>
+            <item>Sync/media hygiene: source duplicate NULL datetime fix; shared YoutubeThumbnailCache; cheaper ThumbnailHelper local checks</item>
+            <item>Admin UX: dashboard Modules link; Slider/Widgets integration note; cron header-only X-Cron-Token</item>
+            <item>Maintainability: SchemaService for installer schema; SyncService owns YouTube sync/import (scheduler uses SyncService)</item>
+            <item>Unavailable videos: sync trashes omitted/private YouTube IDs; Tools Remove Unavailable live-checks catalog</item>
+            <item>Fix sync whereIn(provider_video_id) to use STRING binds (MySQL DECIMAL truncation on YouTube IDs)</item>
+            <item>Protected local catalog delivery: images/devart/video/local with managed Apache .htaccess deny; playback via media.stream</item>
+            <item>Pre-release hardening: SyncService title fix; unprotected local-path warning; SchemaService jobs DDL; access=0 removed; If-Range on media.stream</item>
+            <item>VideoCatalogService getItems for peers; mod_devartvideo uses it; guest view cache for listing/detail/category/tag</item>
+            <item>Fix module Player local video + component language load in modules; no guest cache on search; clear view cache after sync</item>
+            <item>Fix module Player/Single ignoring the chosen video when stale video_ids remain in module params</item>
+            <item>Clear guest com_devartvideo view cache after administrator video Save</item>
+        </fix>
+
+        <note>
+            <item>Install or update with the package ZIP; later updates use Joomla native package updates</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+            <item>Component, module, and task plugin always update together through pkg_devartvideo</item>
+            <item>Nginx needs an equivalent location deny for local catalog video files; local ads remain directly reachable</item>
+        </note>
+    </changelog>
+
+
+    <changelog>
+        <element>pkg_devartvideo</element>
+        <type>package</type>
         <version>1.1.6</version>
 
         <fix>
