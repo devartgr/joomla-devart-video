@@ -4,7 +4,7 @@ Modern video management package for Joomla 6, designed for news portals, magazin
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3.0%2B-green)
-![Release](https://img.shields.io/badge/Version-1.1.6-orange)
+![Release](https://img.shields.io/badge/Version-1.1.7-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
