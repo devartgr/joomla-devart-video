@@ -3,6 +3,29 @@
     <changelog>
         <element>pkg_devartvideo</element>
         <type>package</type>
+        <version>1.2.0</version>
+
+        <fix>
+            <item>Thin Comments host plugin plg_content_devartvideocomments for video detail (context com_devartvideo.item)</item>
+            <item>Panel gated by Comments Settings enable_video; soft-fail when com_devartcomments is absent</item>
+            <item>Permanent video delete notifies Comments purgeForItem via onContentAfterDelete</item>
+            <item>Videos menu items_per_page is no longer overwritten by Global Configuration list_limit</item>
+            <item>Videos menu sort_order and featured_first now drive the listing ORDER BY</item>
+            <item>Featured First is opt-in (default Off); menu sort uses title/date only (no manual ordering)</item>
+        </fix>
+
+        <note>
+            <item>Install or update with the package ZIP; later updates use Joomla native package updates</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+            <item>Comments panel requires com_devartcomments 1.0.81+ with enable_video On (Comments owns that flag)</item>
+            <item>Component, module, task plugin, and Comments host plugin always update together through pkg_devartvideo</item>
+        </note>
+    </changelog>
+
+
+    <changelog>
+        <element>pkg_devartvideo</element>
+        <type>package</type>
         <version>1.1.7</version>
 
         <fix>

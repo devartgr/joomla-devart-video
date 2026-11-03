@@ -4,7 +4,7 @@ Modern video management package for Joomla 6, designed for news portals, magazin
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3.0%2B-green)
-![Release](https://img.shields.io/badge/Version-1.1.7-orange)
+![Release](https://img.shields.io/badge/Version-1.2.0-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -15,7 +15,7 @@ DevArt Video is a modern Joomla 6 video platform designed from the ground up for
 
 It allows administrators to create and manage professional video libraries with categories, featured videos, YouTube integration, local videos, responsive playback and structured video information while remaining lightweight and easy to maintain.
 
-The package includes an administrator component, a frontend module, and a scheduled task plugin. All extensions update together through the package.
+The package includes an administrator component, a frontend module, a scheduled task plugin, and a thin DevArt Comments host content plugin. All extensions update together through the package.
 
 ---
 
@@ -162,7 +162,7 @@ Important:
 - Updates are advertised for **`pkg_devartvideo`** only
 - Update type: **`package`**
 - Client: **`site`**
-- Component, module, and task plugin always update together
+- Component, module, task plugin, and Comments host plugin always update together
 
 ---
 
@@ -173,8 +173,11 @@ This package installs:
 - `com_devartvideo` — administrator component
 - `mod_devartvideo` — site module
 - `plg_task_devartvideo` — scheduled task plugin
+- `plg_content_devartvideocomments` — thin DevArt Comments host for video detail
 
 Always install and update the **package ZIP**, not the child extensions separately.
+
+Optional Comments panel: requires `com_devartcomments` 1.0.81+ with Comments Settings `enable_video` On. Comments is not bundled in this package.
 
 ---
 
@@ -273,7 +276,38 @@ Not Supported:
 
 ## Current Version
 
-1.1.6
+1.2.0
+
+---
+
+## What's New in 1.2.0
+
+Thin DevArt Comments host and Videos menu listing fixes — 3 November 2026.
+
+### Additions
+
+- Content plugin `plg_content_devartvideocomments` mounts the DevArt Comments panel on video detail (`com_devartvideo.item`) when Comments Settings `enable_video` is On
+- Soft-fail when `com_devartcomments` is absent; permanent video delete notifies Comments purge via `onContentAfterDelete`
+
+### Fixes
+
+- Videos menu `items_per_page` is no longer overwritten by Global Configuration `list_limit`
+- Menu `sort_order` and opt-in `featured_first` (default Off) now drive the listing ORDER BY
+- Manual catalog `ordering` is not a menu sort option; lists use title/date choices only
+
+---
+
+## What's New in 1.1.7
+
+Protected local catalog, sync/catalog hardening, and guest view cache — October 2026.
+
+### Highlights
+
+- Protected local catalog playback via `media.stream` with Apache web-deny for catalog video files
+- Faster, safer listings: nested-set categories, EXISTS filters, FULLTEXT + LIKE fallback
+- YouTube sync/unavailable cleanup hardening
+- `VideoCatalogService` for peers/module; guest view cache with clear on sync and admin Save
+- Module Player fixes: local video, language load, correct selected video
 
 ---
 
