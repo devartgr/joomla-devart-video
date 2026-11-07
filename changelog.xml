@@ -3,6 +3,26 @@
     <changelog>
         <element>pkg_devartvideo</element>
         <type>package</type>
+        <version>1.2.1</version>
+
+        <fix>
+            <item>Canonical videos Itemid skips taxonomy-scoped menus and ignores a misconfigured Settings listing menu that points at a scoped menu</item>
+            <item>Video detail and category URLs append under the unrestricted/categories canonical base</item>
+            <item>Category links prefer a dedicated One category videos menu when source=categories and category_ids is exactly that category</item>
+            <item>Listing filter form and Clear use RouteHelper::getVideosRoute()</item>
+        </fix>
+
+        <note>
+            <item>Install or update with the package ZIP; later updates use Joomla native package updates</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+            <item>Component, module, task plugin, and Comments host plugin always update together through pkg_devartvideo</item>
+        </note>
+    </changelog>
+
+
+    <changelog>
+        <element>pkg_devartvideo</element>
+        <type>package</type>
         <version>1.2.0</version>
 
         <fix>
