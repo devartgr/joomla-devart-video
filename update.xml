@@ -6,12 +6,12 @@
         <element>pkg_devartvideo</element>
         <type>package</type>
         <client>site</client>
-        <version>1.2.0</version>
+        <version>1.2.1</version>
         <infourl title="DevArt Video">https://github.com/devartgr/joomla-devart-video</infourl>
         <downloads>
-            <downloadurl type="full" format="zip">https://github.com/devartgr/joomla-devart-video/releases/download/v1.2.0/pkg_devartvideo_v1.2.0.zip</downloadurl>
+            <downloadurl type="full" format="zip">https://github.com/devartgr/joomla-devart-video/releases/download/v1.2.1/pkg_devartvideo_v1.2.1.zip</downloadurl>
         </downloads>
-        <sha256>61ea8b93bab6d0f34b80bf1f3c7ed3ad59c624227ff8c7145a8541d87a0e4ec1</sha256>
+        <sha256>db6bbeb0b005b88a4c168f2d5615adf59dd7015f33e1c4b1fac464ea88002e10</sha256>
         <tags>
             <tag>stable</tag>
         </tags>
