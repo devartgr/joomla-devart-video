@@ -10,7 +10,7 @@ and presenting YouTube and local videos.
 
 ## Package
 
-Version `1.2.1` contains:
+Version `1.2.2` contains:
 
 - `com_devartvideo`
 - `mod_devartvideo`
